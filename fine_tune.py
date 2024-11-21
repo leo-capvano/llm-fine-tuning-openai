@@ -1,14 +1,8 @@
 import time
 
-from svc.llm_svc import ask_model
 from svc.training_svc import upload_training_file, create_training_job, training_job_status
 
 BASE_MODEL = "gpt-4o-2024-08-06"
-
-
-def ask(user_input):
-    for chunk in ask_model(user_input=user_input):
-        yield chunk
 
 
 def main():
